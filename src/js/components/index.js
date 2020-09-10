@@ -4,6 +4,6 @@ export { default as NoMatchPage } from './NoMatchPage';
 export { default as Logo } from './Navigation/Logo';
 export { default as Header } from './Navigation/Header';
 export { default as Backdrop } from './UI/Backdrop';
-
+export { default as Spinner } from './UI/Spinner';
 export { default as SideDrawer } from './Navigation/SideDrawer';
 export { default as Layout } from './Layout';

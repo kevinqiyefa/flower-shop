@@ -3,6 +3,7 @@ import HeroSection from './HeroSection';
 import CategoriesDropdown from './CategoriesDropdown';
 
 import styles from './style.module.scss';
+import ProductList from './ProductList';
 
 const HomePage = () => {
   return (
@@ -12,6 +13,8 @@ const HomePage = () => {
         <h3>Catergory By </h3>
         <CategoriesDropdown />
       </div>
+
+      <ProductList />
     </>
   );
 };
