@@ -1,0 +1,34 @@
+@import '/src/style/breakPoints.scss';
+
+.cartContainer {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/src/assets/icons/shopping-bag-white.svg'); /* The image used */
+
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: contain;
+
+  .ShoppingBagIcon {
+    width: 24px;
+    height: 24px;
+    color: white;
+  }
+
+  & > div {
+    position: absolute;
+    font-size: 10px;
+    font-weight: bold;
+    bottom: 4px;
+  }
+}
+
+@media only screen and (max-width: $max-sm) {
+  .cartContainer {
+    background-image: url('/src/assets/icons/shopping-bag.svg');
+  }
+}

@@ -1,0 +1,29 @@
+@import '/src/style/breakPoints.scss';
+
+.Header {
+  height: 80px;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  top: 0;
+  left: 0;
+  background-color: #0bbefc;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 50;
+  position: fixed;
+
+  & > nav {
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: $max-sm) {
+  .Header {
+    .DesktopOnly {
+      display: none;
+    }
+  }
+}
