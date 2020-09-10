@@ -1,0 +1,28 @@
+@import '/src/style/breakPoints.scss';
+
+.CatergoriesFilter {
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+
+  & > h3 {
+    font-weight: 500;
+    color: #333;
+    font-size: 1.14rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-right: 2rem;
+  }
+
+  & > div {
+    min-width: 200px;
+  }
+}
+
+@media only screen and (max-width: $max-xs) {
+  .CatergoriesFilter {
+    & > h3 {
+      margin-right: 0;
+    }
+  }
+}
