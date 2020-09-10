@@ -1,4 +1,23 @@
+@import '/src/style/breakPoints.scss';
 .ProductListContainer {
   text-align: center;
   position: relative;
+}
+
+.ProductList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+}
+
+@media only screen and (max-width: $max-md) {
+  .ProductList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: $max-sm) {
+  .ProductList {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
