@@ -4,12 +4,17 @@ import { useSelector, shallowEqual } from 'react-redux';
 import styles from './style.module.scss';
 import { Spinner } from '../..';
 import Product from './Product';
+import ProductDetails from './ProductDetails';
 
 const ProductList = () => {
   const isLoading = useSelector((state) => state.category.loadingCategory, shallowEqual);
   const products = useSelector((state) => state.category.category.products) || [];
 
   const [index, setIndex] = useState(false);
+
+  const closeViewMode = () => {
+    setIndex(false);
+  };
 
   const getLowerestPrice = (arr) => {
     let price = Infinity;
@@ -48,6 +53,13 @@ const ProductList = () => {
       ) : (
         <>
           <div className={styles.ProductList}>{displayProductList(productList)}</div>
+          {index !== false && (
+            <ProductDetails
+              close={closeViewMode}
+              index={index}
+              product={productList[index]}
+            />
+          )}
         </>
       )}
     </div>
