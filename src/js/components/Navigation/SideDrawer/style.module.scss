@@ -29,7 +29,7 @@
   margin-bottom: 32px;
 }
 
-@media only screen and (min-width: $max-sm) {
+@media only screen and (min-width: $min-md) {
   .SideDrawer {
     display: none;
   }

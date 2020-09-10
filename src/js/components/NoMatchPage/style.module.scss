@@ -1,0 +1,10 @@
+.notFoundImg {
+  display: flex;
+
+  & > img {
+    margin: 2em auto;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+  }
+}

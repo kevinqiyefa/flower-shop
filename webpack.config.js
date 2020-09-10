@@ -15,6 +15,10 @@ const base = {
     path: BUILD_DIR,
     filename: 'bundle.js',
   },
+
+  devServer: {
+    historyApiFallback: true,
+  },
   module: {
     rules: [
       {

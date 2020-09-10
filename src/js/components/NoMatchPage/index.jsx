@@ -1,10 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import noMatchImg from '../../../assets/images/404.png';
+import styles from './style.module.scss';
 
-const NoMatchPage = (props) => {
-  return <div>NoMatchPage</div>;
-};
-
-NoMatchPage.propTypes = {};
+function NoMatchPage() {
+  return (
+    <div className={styles.notFoundImg}>
+      <img src={noMatchImg} alt="404 Not Found!" />
+    </div>
+  );
+}
 
 export default NoMatchPage;
