@@ -1,0 +1,49 @@
+@import '/src/style/breakPoints.scss';
+
+.checkoutPage {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 1rem;
+
+  .checkoutHeader {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid darkgrey;
+
+    .headerBlock {
+      text-transform: capitalize;
+      width: 23%;
+
+      &:last-child {
+        width: 8%;
+      }
+    }
+  }
+
+  .total {
+    margin-top: 30px;
+    margin-left: auto;
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: $max-xs) {
+  .checkoutPage {
+    font-size: 0.9rem;
+    .checkoutHeader {
+      .headerBlock {
+        width: 22%;
+
+        &:last-child {
+          width: 10%;
+        }
+      }
+    }
+  }
+}

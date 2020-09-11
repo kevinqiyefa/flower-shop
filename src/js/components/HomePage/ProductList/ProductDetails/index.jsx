@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { useDispatch } from 'react-redux';
 import { Backdrop } from '../../../../components';
+import { addItem } from '../../../../store/actions';
 
 import styles from './style.module.scss';
 
@@ -11,6 +12,7 @@ const ProductDetails = ({ product, close, index }) => {
     description,
     manufacturer: { name, location },
   } = product;
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -29,7 +31,7 @@ const ProductDetails = ({ product, close, index }) => {
           type="button"
           value="Add to Cart"
           className={styles.addToCartBtn}
-          onClick={() => {}}
+          onClick={() => dispatch(addItem(product))}
         />
       </div>
     </>
